@@ -100,6 +100,7 @@ class Sync {
         const workDirectory = Workspace.getWorkingDir(workspace);
         const repoUrl = await this.getRepoUrl(context, workspace._id, false);
         await sGit.clone(repoUrl, workDirectory);
+        await sGit.checkout('insomnia');
     }
 }
 

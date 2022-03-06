@@ -10,7 +10,7 @@ class SyncToLocal {
         }
 
         try {
-            await sGit.pull(['--no-rebase']);
+            await sGit.pull(['--no-rebase'], 'insomnia');
         } catch(error) {
             console.error(error);
             await this.handleError(error, sGit, context, data);

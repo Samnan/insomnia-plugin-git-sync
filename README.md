@@ -14,6 +14,23 @@ Therefore, it is a good idea to always pull before doing changes.
 ## Save project in GIT for the first time
 
 1. Create a GIT Repository on your GIT instance
+
+## Custom changes (MUST READ)
+
+If these steps are not followed, you will not be able to use this fork of the plugin.
+
+First of all, you must create a branch by the name `insomnia` in your repo, preferably using following way:
+
+```
+  git checkout --orphan insomnia
+  got rm -rf .
+  touch .gitignore
+  git add .
+  git commit -m "First commit"
+  git push -u origin insomnia
+```
+After that, follow remaning steps below.
+
 2. Set Repository URL: click on project name in Insomnia > Set GIT Repository URL
 3. Click on project name in Insomnia > Push to GIT Repository
 

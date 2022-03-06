@@ -84,7 +84,11 @@ class Workspace {
     }
 
     getWorkspaceFile(data) {
-        return this.getWorkingDir(data.workspace) + '/workspace.json';
+        const filename = data.workspace.name
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, '-')
+            .replace(/[-\s]+/g, '-');
+        return this.getWorkingDir(data.workspace) + '/' + filename + '-insomnia.json';
     }
 }
 
