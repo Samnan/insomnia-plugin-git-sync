@@ -23,7 +23,7 @@ First of all, you must create a branch by the name `insomnia` in your repo, pref
 
 ```
   git checkout --orphan insomnia
-  got rm -rf .
+  git rm -rf .
   touch .gitignore
   git add .
   git commit -m "First commit"
