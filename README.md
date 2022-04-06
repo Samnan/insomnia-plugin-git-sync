@@ -39,3 +39,7 @@ After that, follow remaning steps below.
 1. Create a project with the same name as used before
 2. Set Repository URL: click on project name in Insomnia > Set GIT Repository URL
 3. Click on project name in Insomnia > Pull from GIT Repository
+
+## Notes about custom changes
+
+Changes in this fork allow the insomnia workspace to be saved in a git branch by the name `insomina` in your project repo. The advantage of that is the insomnia branch does not contain any other project file, and only the wokrspace json. So using this fork of plugin makes it a bit easier for me to keep insomnia workspace within the main project repo, without affecting any of the project files.
