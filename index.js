@@ -30,12 +30,15 @@ module.exports.workspaceActions = [
             if (await Sync.isSetup(context, data) === false) {
                 return;
             }
-            const expFilename = await Workspace.exportProject(context, data);
-            if (!expFilename) {
-                return;
-            }
 
-            await SyncToServer.push(context, data, expFilename);
+            if (confirm('Are you sure you want to push your changes to Git?')) {
+                const expFilename = await Workspace.exportProject(context, data);
+                if (!expFilename) {
+                    return;
+                }
+
+                await SyncToServer.push(context, data, expFilename);
+            }
         },
     }
 ];
